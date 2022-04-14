@@ -1,0 +1,15 @@
+{
+    "protoc": {
+        "options": [
+            "--proto_path=${workspaceRoot}/third_party"
+        ]
+    },
+    "cSpell.words": [
+        "amsokol",
+        "deps",
+        "googleapis",
+        "protobuf",
+        "protoc",
+        "protos"
+    ]
+}
