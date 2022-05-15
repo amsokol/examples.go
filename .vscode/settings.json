@@ -8,6 +8,7 @@
         "amsokol",
         "deps",
         "googleapis",
+        "noinline",
         "protobuf",
         "protoc",
         "protos"
