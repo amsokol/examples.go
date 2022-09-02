@@ -1,6 +1,10 @@
 package main
 
-import "log"
+import (
+	"errors"
+	"fmt"
+	"log"
+)
 
 type Data struct {
 	value string
@@ -28,6 +32,16 @@ func paramsByRef(dr *Data) {
 	log.Printf("value: %d", vr)
 }
 
+//go:noinline
+func returnErr(drr *Data) error {
+	err := errors.New("some error")
+	if err != nil {
+		return fmt.Errorf("another one error %s: %w", drr.value, err)
+	}
+
+	return nil
+}
+
 func main() {
 	d1 := Data{"", true}
 	d2 := Data{"", false}
@@ -42,6 +56,8 @@ func main() {
 
 	paramsByVal(d1)
 	paramsByRef(&d2)
+
+	_ = returnErr(&d2)
 }
 
 // go build -gcflags "-m -m"
