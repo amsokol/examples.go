@@ -1,5 +1,7 @@
-go 1.18
+go 1.20
 
-use ./protobuf-rest
-
-use ./escape-analysis
+use (
+	./protobuf-rest
+	./escape-analysis
+	./arenas
+)
