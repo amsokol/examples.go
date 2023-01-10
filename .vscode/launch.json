@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "fx-demo",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/fx-demo"
+        },
+        {
             "name": "protobuf-rest",
             "type": "go",
             "request": "launch",

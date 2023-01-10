@@ -2,7 +2,10 @@
 
 package main
 
-import "arena"
+import (
+	"arena"
+	"fmt"
+)
 
 func main() {
 	// Create an arena in the beginning of the function.
@@ -12,5 +15,5 @@ func main() {
 
 	b := arena.MakeSlice[byte](mem, 10, 100)
 
-	println("%+v", b)
+	fmt.Printf("%+v\n", b)
 }
